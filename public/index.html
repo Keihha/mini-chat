@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sing in</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body class="container">
+
+    <div class="row mt-5">
+        <div class="col-sm-6">
+            <h1>Google Sing in</h1>
+            <hr>
+            <div class="col-sm-6"></div>
+        </div>
+        <div class="col-sm-6">
+            <h1>Custom Login</h1>
+            <hr>
+            <form id="forme" class="d-grid">
+                <input type="text" name="email" class="form-control mb-2" placeholder="Email">
+                <input type="password" name="password" class="form-control mb-2" placeholder="Password">
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="g_id_onload"
+        data-client_id="904409724039-0bsqpdb7kvboh3mnn2fofsu4jn9cb71k.apps.googleusercontent.com"
+        data-auto_prompt="false"
+        data-callback="handleCredentialResponse">
+    </div>
+
+    <div class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="outline"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left">
+
+    </div>
+
+    <hr>
+
+    <button id="google_sing_out">
+        Sing-Out
+    </button>
+
+    <hr>
+    <a href="http://localhost:8081/chat.html">Sala de Chat</a>
+    
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="./js/auth.js"></script>
+    
+</body>
+</html>
